@@ -1,0 +1,21 @@
+/*
+ * Standalone-scanner additions for the Prospector Touch shield.
+ *
+ * Provides a mock key source so ZMK has a kscan when the shield is built on its
+ * own (no keyboard dongle shield layered underneath). This file lives only in
+ * this config repo, so keyboard-dongle builds that bring their own kscan are
+ * unaffected.
+ */
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+    };
+
+    mock_kscan: kscan_mock {
+        compatible = "zmk,kscan-mock";
+        columns = <1>;
+        rows = <1>;
+        events = <0>;
+    };
+};

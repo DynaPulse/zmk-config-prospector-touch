@@ -1,0 +1,16 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: dynapulse
+      url-base: https://github.com/DynaPulse
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: prospector-touch-zmk-module
+      remote: dynapulse
+      revision: main
+  self:
+    path: config

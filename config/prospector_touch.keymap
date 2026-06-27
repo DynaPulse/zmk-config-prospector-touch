@@ -1,0 +1,21 @@
+/*
+ * Standalone scanner keymap for the Prospector Touch shield.
+ *
+ * The device has no physical key matrix; a 1x1 mock kscan (see
+ * prospector_touch.overlay in this config) satisfies ZMK and never fires.
+ * When the shield is layered on a keyboard dongle shield (e.g. totem_dongle)
+ * that shield provides the real kscan + keymap and this file is not used.
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <&none>;
+        };
+    };
+};
