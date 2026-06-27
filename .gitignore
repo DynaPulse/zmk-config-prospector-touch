@@ -1,0 +1,15 @@
+# west workspace artifacts — a ZMK user-config repo must contain only
+# config/, build.yaml and .github/. The workspace and its imported projects
+# are created by `west init`/`west update` in CI and must never be committed,
+# or `west init` aborts with "already initialized".
+.west/
+zmk/
+zephyr/
+modules/
+prospector-touch-zmk-module/
+
+# build output
+build/
+*.uf2
+*.hex
+*.bin
