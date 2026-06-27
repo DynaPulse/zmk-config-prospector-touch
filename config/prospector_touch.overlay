@@ -7,9 +7,12 @@
  * unaffected.
  */
 
+#include <dt-bindings/zmk/matrix_transform.h>
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zmk,matrix-transform = &mock_transform;
     };
 
     mock_kscan: kscan_mock {
@@ -17,5 +20,12 @@
         columns = <1>;
         rows = <1>;
         events = <0>;
+    };
+
+    mock_transform: keymap_transform {
+        compatible = "zmk,matrix-transform";
+        columns = <1>;
+        rows = <1>;
+        map = <RC(0,0)>;
     };
 };

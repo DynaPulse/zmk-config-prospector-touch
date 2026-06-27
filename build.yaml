@@ -1,8 +1,6 @@
 include:
-  - board: xiao_ble/nrf52840/zmk
+  - board: xiao_ble//zmk
     shield: prospector_touch
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: prospector_touch
-  - board: xiao_ble/nrf52840/zmk
+  - board: xiao_ble//zmk
     shield: settings_reset
